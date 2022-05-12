@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #FB6B6B;
+    font-family: 'Righteous', cursive;
+    font-family: 'Recursive', sans-serif;
+    
+}
+
+.tela-inicial{
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top:200px;
+}
+
+.tela-inicial > img {
+    width: 136px;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.tela-inicial > span{
+    width: 257px;
+    height: 59px;
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.tela-inicial > button{
+    margin-top: 70px;
+    margin-left: 30px;
+    width: 246px;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+}
+
+button > p{
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #D70900;
+    }
