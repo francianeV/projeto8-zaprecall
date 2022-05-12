@@ -66,4 +66,121 @@ button > p{
     line-height: 22px;
     text-align: center;
     color: #D70900;
-    }
+}
+
+.topo-telaPerguntas{
+    top:0;
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    
+ 
+}
+.container-topo{
+    background-color: #FB6B6B;;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    padding-top: 50px;
+    
+}
+
+.topo-telaPerguntas > img{
+    margin-left: 20px;
+    width: 52px;
+    height: auto
+}
+
+.topo-telaPerguntas > span{
+    width: 203.17px;
+    height: 44px;
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+    transform: rotate(0.58deg);
+    margin-left:20px;
+}
+.lista-perguntas{
+    width: auto;
+    height: auto;
+    margin-top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+.card{
+    width: 300px;
+    height: 65px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+
+}
+
+.card > span{
+    width: 100px;
+    height: 19px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    text-align: center;
+    margin-left: 15px;
+
+}
+
+.card > img{
+    width: 20px;
+    height: 23px;
+    position: absolute;
+    right: 20px;
+}
+
+.footer-perguntas{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contagem{
+    height: 30px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
