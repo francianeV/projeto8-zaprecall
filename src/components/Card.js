@@ -3,6 +3,8 @@ import React from "react";
 export default function Card({pergunta, index}) {
 
     const [clicou, SetClicou] = React.useState(false);
+    const [resposta, setResposta] = React.useState(false);
+
     return (
         <li className="clicando" onClick={() => SetClicou(!clicou)}>
         {clicou ? (<li className="perguntas">
