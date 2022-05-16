@@ -121,6 +121,9 @@ button > p{
     margin-right: auto;
     margin-bottom: 80px;
 }
+
+
+
 .card{
     width: 300px;
     height: 65px;
@@ -142,7 +145,7 @@ button > p{
     align-items: center;
 }
 
-.casca > span{
+.pergunta-span{
     width: 100px;
     height: 19px;
     font-family: 'Recursive';
@@ -153,7 +156,21 @@ button > p{
     color: #333333;
     text-align: center;
     margin-left: 15px;
+}
 
+.resposta-vermelha{
+    text-decoration: line-through;
+    color: red;
+}
+
+.resposta-verde{
+    text-decoration: line-through;
+    color: #2FBE34;
+}
+
+.resposta-laranja{
+    text-decoration: line-through;
+    color: #FF922E;
 }
 
 .casca > img{

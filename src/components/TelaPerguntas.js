@@ -13,6 +13,12 @@ export default function TelaPerguntas() {
     { pergunta: "Usamos props para __", resposta: "passar diferentes informações para componentes" },
     { pergunta: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }];
 
+    const [counter, setCounter] = React.useState(0);
+
+    const increase = () => {
+        setCounter(count => count + 1);
+      };
+
 
     perguntas.sort(randomize);
 
@@ -26,7 +32,7 @@ export default function TelaPerguntas() {
         <>
             <Topo />
             <ul className="lista-perguntas">
-                {perguntas.map(resp => <Resposta resposta={resp.resposta} />)}
+                {perguntas.map((card, index) => <Card key={index} index={index} pergunta={card.pergunta} respostas={card.resposta} />)}
             </ul>
             <Footer tamanho={tamanho} />
         </>
