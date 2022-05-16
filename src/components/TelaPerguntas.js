@@ -13,11 +13,9 @@ export default function TelaPerguntas() {
     { pergunta: "Usamos props para __", resposta: "passar diferentes informações para componentes" },
     { pergunta: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }];
 
-    const [counter, setCounter] = React.useState(0);
+    const [respostas, setRespostas] = React.useState([]);
 
-    const increase = () => {
-        setCounter(count => count + 1);
-      };
+    //const [counter, setCounter] = React.useState(0);
 
 
     perguntas.sort(randomize);
@@ -28,13 +26,16 @@ export default function TelaPerguntas() {
 
     const tamanho = perguntas.length;
 
+    console.log(respostas);
+    console.log(respostas.length);
+
     return (
         <>
             <Topo />
             <ul className="lista-perguntas">
-                {perguntas.map((card, index) => <Card key={index} index={index} pergunta={card.pergunta} respostas={card.resposta} />)}
+                {perguntas.map((card, index) => <Card key={index} index={index} pergunta={card.pergunta} resposta={card.resposta} respostas={respostas} setRespostas={setRespostas}/>)}
             </ul>
-            <Footer tamanho={tamanho} />
+            <Footer tamanho={tamanho} respostas={respostas}/>
         </>
     );
 }
@@ -50,10 +51,10 @@ function Topo() {
     );
 }
 
-function Footer({ tamanho }) {
+function Footer({tamanho, respostas}) {
     return (
         <div className="footer-perguntas">
-            <div className="contagem">0/{tamanho} CONCLUÍDOS</div>
+            <div className="contagem">{`${respostas.length}/${tamanho} CONCLUÍDOS`}</div>
         </div>
     );
 
