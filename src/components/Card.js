@@ -1,5 +1,4 @@
 import React from "react";
-import Resposta from "./Resposta";
 
 export default function Card({pergunta, index, resposta, respostas, setRespostas}) {
 
@@ -57,10 +56,10 @@ export default function Card({pergunta, index, resposta, respostas, setRespostas
                 </li>) : clicou === 'respostas' ? (
                     <li className="respostas">
                         <div className="resposta">{resposta}</div>
-                        <div className="resposta-escolha" onClick={() => {fecharPergunta()}}>
-                            <div className="nao-lembrou"><span onClick={() => {esqueceu(); setRespostas([...respostas,{typeAnswer:'esqueceu'}])}}>Não lembro</span></div>
-                            <div className="quase"><span onClick={() => {quaseEsqueceu(); setRespostas([...respostas,{typeAnswer:'quase'}])}}>Quase não lembrei</span></div>
-                            <div className="lembrou"><span onClick={() => {lembrou(); setRespostas([...respostas,{typeAnswer:'lembrou'}])}}>Zap!</span></div>
+                        <div className="resposta-escolha">
+                            <div className="nao-lembrou"><span onClick={() => {fecharPergunta(); esqueceu(); setRespostas([...respostas,{typeAnswer:'esqueceu'}])}}>Não lembro</span></div>
+                            <div className="quase"><span onClick={() => {fecharPergunta(); quaseEsqueceu(); setRespostas([...respostas,{typeAnswer:'quase'}])}}>Quase não lembrei</span></div>
+                            <div className="lembrou"><span onClick={() => {fecharPergunta(); lembrou(); setRespostas([...respostas,{typeAnswer:'lembrou'}])}}>Zap!</span></div>
                         </div>  
                     </li>) : ""}
         </li>

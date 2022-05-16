@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
-import Resposta from "./Resposta";
+import Fim from "./Final";
+
 
 export default function TelaPerguntas() {
 
@@ -14,8 +15,10 @@ export default function TelaPerguntas() {
     { pergunta: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }];
 
     const [respostas, setRespostas] = React.useState([]);
+    const [footer, setFooter] = React.useState(true);
 
-    //const [counter, setCounter] = React.useState(0);
+    //const arraydeicones =[{esqueceu: esqueceu}, {quase: quase}, {lembrou: zap}];
+
 
 
     perguntas.sort(randomize);
@@ -28,6 +31,8 @@ export default function TelaPerguntas() {
 
     console.log(respostas);
     console.log(respostas.length);
+    console.log(perguntas.length);
+   // console.log(esqueceu);
 
     return (
         <>
@@ -35,7 +40,8 @@ export default function TelaPerguntas() {
             <ul className="lista-perguntas">
                 {perguntas.map((card, index) => <Card key={index} index={index} pergunta={card.pergunta} resposta={card.resposta} respostas={respostas} setRespostas={setRespostas}/>)}
             </ul>
-            <Footer tamanho={tamanho} respostas={respostas}/>
+            {footer ? <Footer tamanho={tamanho} respostas={respostas}/> : <Fim /> }
+             
         </>
     );
 }
@@ -53,8 +59,13 @@ function Topo() {
 
 function Footer({tamanho, respostas}) {
     return (
+        <div className="footer">
         <div className="footer-perguntas">
             <div className="contagem">{`${respostas.length}/${tamanho} CONCLUÍDOS`}</div>
+        </div>
+        <div className="icones">
+       
+        </div>
         </div>
     );
 
